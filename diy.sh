@@ -102,7 +102,7 @@ erb ./nginx.conf.erb >${OPENSHIFT_DATA_DIR}nginx/conf/nginx.conf
 erb ./php.ini.erb >${OPENSHIFT_DATA_DIR}php/etc/php.ini
 mkdir ${OPENSHIFT_DATA_DIR}nginx/run
 erb ./www-facgi.conf.erb >${OPENSHIFT_DATA_DIR}nginx/run/www-facgi.conf
-cp ./php-fpm.conf ${OPENSHIFT_DATA_DIR}nginx/conf
+cp ./php-fpm.conf ${OPENSHIFT_DATA_DIR}php/etc/php-fpm.conf
 mv ./wordpress.conf ${OPENSHIFT_DATA_DIR}nginx/run
 mkdir /tmp/cache
 mkdir /tmp/cache/wpcache
