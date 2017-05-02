@@ -104,6 +104,8 @@ mkdir ${OPENSHIFT_DATA_DIR}nginx/run
 erb ./www-facgi.conf.erb >${OPENSHIFT_DATA_DIR}nginx/run/www-facgi.conf
 cp ./php-fpm.conf ${OPENSHIFT_DATA_DIR}nginx/conf
 mv ./wordpress.conf ${OPENSHIFT_DATA_DIR}nginx/run
+mkdir /tmp/cache
+mkdir /tmp/cache/wpcache
 mkdir /tmp/cache/wpcache/temp
-mkdr ${OPENSHIFT_HOMEDIR}app-root/runtime/repo/www
+mkdir ${OPENSHIFT_HOMEDIR}app-root/runtime/repo/www
 rm -rf nginx.conf.erb php.ini.erb php-fpm.conf www-facgi.conf.erb wordpress.conf
